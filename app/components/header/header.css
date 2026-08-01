@@ -1,0 +1,50 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 90%;
+  max-width: 2000px;
+  border-radius: 4rem;
+  background: transparent;
+  border: var(--global-border);
+  backdrop-filter: blur(10px);
+  z-index: 11;
+  gap: 1rem;
+  position: sticky;
+  top: 1rem;
+}
+
+.header > div > h1 {
+  font-weight: bolder;
+}
+
+.header > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header > nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    cursor: pointer;
+}
+
+.get-started-button {
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    border-radius: 1rem;
+    background:  linear-gradient(to bottom right, rgb(255, 255, 255) 40%, gold 90%);
+    
+}
+
+.get-started-button span {
+    color: black;
+}
+
+.glass-effect {
+    box-shadow: inset 0 0 40px #dbd9d967;
+}

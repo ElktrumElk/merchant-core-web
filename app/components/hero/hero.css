@@ -1,0 +1,140 @@
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    
+}
+
+.title {
+    font-size: clamp(2rem, 3svw, 4rem);
+    font-weight: bolder;
+    text-align: center;
+
+}
+
+.description {
+    color: #d7d7d7f7;
+    width: 100%;
+    text-align: center;
+    max-width: 600px;
+    align-self: center;
+
+}
+
+.slogan-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1000px;
+    width: 100%;
+    margin-block-start: 4rem;
+}
+
+.merchant-core-img-cnt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    padding: 1rem;
+    background: rgba(1, 33, 65, 0.214);
+    backdrop-filter: blur(10px);
+}
+
+.merchant-core-img-cnt .mer-img {
+    display: flex;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.button-cnt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.button-cnt > button, .button {
+    display: flex;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(to bottom right , white, rgb(143, 102, 0));
+    border-radius: 4rem;
+    border: var(--global-border);
+    cursor: pointer;
+}
+
+.button-cnt > button:last-child {
+    background: transparent;
+
+}
+
+.button-cnt > .button:first-child {
+    box-shadow: 0px 0px 10px  rgb(255, 223, 61), inset 0 0 26px 0rem gold;
+}
+
+.button-cnt > button > span {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+}
+
+.section-divider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    margin-block: 3rem;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.marquee-track {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    width: max-content;
+    animation: marquee 30s linear infinite;
+}
+
+.section-divider:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+.platform-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .75rem;
+    white-space: nowrap;
+}
+
+.platform-item svg {
+    display: block;
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 6px currentColor);
+}
+
+.platform-item span {
+    font-weight: bolder;
+    font-size: 1.2rem;
+    letter-spacing: .02em;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+

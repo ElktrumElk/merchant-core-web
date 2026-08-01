@@ -1,0 +1,150 @@
+
+.solution-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.solution-title {
+    font-weight: bold;
+    font-size: clamp(1rem, 2svw, 4rem);
+}
+
+.issue-card {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    height: 10rem;
+    width: 50%;
+   
+    background: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 166, 0, 0.9)) !important;
+}
+
+.is-cd-div {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.is-cd-div > h2 {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: black;
+    
+}
+
+.is-cd-div > p {
+    color: rgb(50, 50, 50);
+}
+
+.track-sol-exp {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin-block: 2.5rem;
+}
+
+.track-sol-exp::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    transform: translateX(-50%);
+    z-index: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(255, 217, 0, 0.6) 12%,
+        rgba(255, 217, 0, 0.6) 88%,
+        transparent
+    );
+}
+
+.sol-exp-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    width: 50%;
+    box-sizing: border-box;
+    margin-block: 1.25rem;
+}
+
+.sol-exp-item.left {
+    align-self: flex-start;
+    justify-content: flex-end;
+    padding-right: 2rem;
+}
+
+.sol-exp-item.right {
+    align-self: flex-end;
+    justify-content: flex-start;
+    padding-left: 2rem;
+}
+
+.sol-exp-card {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem 1.25rem;
+    border-radius: 1rem;
+    background: rgba(1, 33, 65, 0.44);
+    border: var(--global-border);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    max-width: 100%;
+}
+
+.sol-exp-card-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .6rem;
+}
+
+.sol-exp-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: radial-gradient(circle at 30% 30%, rgb(255, 223, 61), rgb(143, 102, 0));
+    box-shadow: 0 0 14px rgba(255, 217, 0, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.35);
+}
+
+.sol-exp-card-header > h3 {
+    font-size: 1.1rem;
+    font-weight: bolder;
+    color: #ffdf3d;
+}
+
+.sol-exp-card > p {
+    color: #d7d7d7f7;
+    font-size: .95rem;
+    line-height: 1.45;
+}
+
+@media (max-width: 700px) {
+    .track-sol-exp::before {
+        left: 1.5rem;
+    }
+
+    .sol-exp-item,
+    .sol-exp-item.left,
+    .sol-exp-item.right {
+        width: 100%;
+        align-self: stretch;
+        justify-content: flex-start;
+        padding: 0 0 0 3.5rem;
+        margin-block: 1rem;
+    }
+}

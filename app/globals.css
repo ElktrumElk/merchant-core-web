@@ -3,6 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --global-border: 1px solid rgba(255, 217, 0, 0.186);
+  scroll-behavior: smooth;
+  scroll-margin-block: 4rem;
 }
 
 @theme inline {
@@ -23,4 +27,226 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-weight: clamp(1rem, 2svw + 2svh, 4rem);
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+ 
+  padding: 1rem;
+}
+
+.click {
+  transform: scale(1);
+  transition: transform .4s ease;
+}
+
+.click:active {
+  transform: scale(.9);
+}
+
+/* ============================================================
+   Glowing twinkling star background
+   Usage: add the "starfield" class to any element that already
+   has its own background — glowing stars scatter and twinkle
+   randomly on top of it.
+   Tune with the optional variables:
+     --star-color  (default: #ffffff)
+     --star-speed  (default: 3.6s, seconds per twinkle cycle)
+   ============================================================ */
+.starfield {
+  position: relative;
+  z-index: 0;
+}
+
+.starfield::before,
+.starfield::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.starfield::before {
+  background-image:
+    radial-gradient(circle at 13.5% 58.9%, var(--star-color, #ffffff) 0 0.9px, transparent 1.4px),
+    radial-gradient(circle at 7.0% 97.0%, var(--star-color, #ffffff) 0 0.9px, transparent 1.4px),
+    radial-gradient(circle at 48.9% 84.6%, var(--star-color, #ffffff) 0 1.0px, transparent 1.5px),
+    radial-gradient(circle at 8.7% 19.9%, var(--star-color, #ffffff) 0 1.5px, transparent 2.0px),
+    radial-gradient(circle at 49.1% 98.9%, var(--star-color, #ffffff) 0 1.5px, transparent 2.0px),
+    radial-gradient(circle at 46.4% 39.9%, var(--star-color, #ffffff) 0 1.0px, transparent 1.5px),
+    radial-gradient(circle at 8.4% 48.5%, var(--star-color, #ffffff) 0 0.9px, transparent 1.4px),
+    radial-gradient(circle at 88.0% 58.3%, var(--star-color, #ffffff) 0 1.5px, transparent 2.0px),
+    radial-gradient(circle at 92.6% 90.9%, var(--star-color, #ffffff) 0 1.5px, transparent 2.0px),
+    radial-gradient(circle at 23.0% 46.0%, var(--star-color, #ffffff) 0 1.6px, transparent 2.1px),
+    radial-gradient(circle at 7.7% 43.2%, var(--star-color, #ffffff) 0 1.3px, transparent 1.8px),
+    radial-gradient(circle at 71.5% 88.8%, var(--star-color, #ffffff) 0 1.5px, transparent 2.0px),
+    radial-gradient(circle at 27.5% 0.9%, var(--star-color, #ffffff) 0 1.4px, transparent 1.9px),
+    radial-gradient(circle at 69.6% 34.5%, var(--star-color, #ffffff) 0 0.9px, transparent 1.4px),
+    radial-gradient(circle at 76.4% 22.6%, var(--star-color, #ffffff) 0 1.0px, transparent 1.5px),
+    radial-gradient(circle at 76.9% 45.5%, var(--star-color, #ffffff) 0 1.1px, transparent 1.6px);
+  background-size:
+    37.1% 37.1%,
+    29.7% 29.7%,
+    24.1% 24.1%,
+    23.9% 23.9%,
+    37.4% 37.4%,
+    29.8% 29.8%,
+    23.3% 23.3%,
+    21.4% 21.4%,
+    20.3% 20.3%,
+    32.0% 32.0%,
+    31.1% 31.1%,
+    28.7% 28.7%,
+    24.1% 24.1%,
+    23.6% 23.6%,
+    26.9% 26.9%,
+    32.7% 32.7%;
+  animation: star-twinkle var(--star-speed, 3.6s) ease-in-out infinite;
+  animation-delay: -0.9s;
+}
+
+.starfield::after {
+  background-image:
+    radial-gradient(circle at 64.2% 54.5%, var(--star-color, #ffffff) 0 1.6px, transparent 2.1px),
+    radial-gradient(circle at 28.9% 58.2%, var(--star-color, #ffffff) 0 1.6px, transparent 2.1px),
+    radial-gradient(circle at 99.1% 77.3%, var(--star-color, #ffffff) 0 1.9px, transparent 2.4px),
+    radial-gradient(circle at 24.6% 25.7%, var(--star-color, #ffffff) 0 1.9px, transparent 2.4px),
+    radial-gradient(circle at 75.6% 68.8%, var(--star-color, #ffffff) 0 1.4px, transparent 1.9px),
+    radial-gradient(circle at 53.4% 55.5%, var(--star-color, #ffffff) 0 1.8px, transparent 2.3px),
+    radial-gradient(circle at 68.6% 87.6%, var(--star-color, #ffffff) 0 1.7px, transparent 2.2px),
+    radial-gradient(circle at 89.8% 81.5%, var(--star-color, #ffffff) 0 1.6px, transparent 2.1px),
+    radial-gradient(circle at 30.6% 81.2%, var(--star-color, #ffffff) 0 1.7px, transparent 2.2px),
+    radial-gradient(circle at 91.4% 11.2%, var(--star-color, #ffffff) 0 1.8px, transparent 2.3px),
+    radial-gradient(circle at 6.1% 91.8%, var(--star-color, #ffffff) 0 2.1px, transparent 2.6px);
+  background-size:
+    41.2% 41.2%,
+    33.5% 33.5%,
+    24.2% 24.2%,
+    35.8% 35.8%,
+    24.9% 24.9%,
+    22.6% 22.6%,
+    23.5% 23.5%,
+    49.5% 49.5%,
+    36.5% 36.5%,
+    23.9% 23.9%,
+    44.8% 44.8%;
+  animation: star-twinkle calc(var(--star-speed, 3.6s) * 1.4) ease-in-out infinite alternate;
+  animation-delay: calc(var(--star-speed, 3.6s) * -0.6);
+}
+
+@keyframes star-twinkle {
+  0%,
+  100% {
+    opacity: 0.18;
+  }
+
+  12% {
+    opacity: 0.85;
+  }
+
+  27% {
+    opacity: 0.3;
+  }
+
+  44% {
+    opacity: 1;
+  }
+
+  58% {
+    opacity: 0.45;
+  }
+
+  73% {
+    opacity: 0.75;
+  }
+
+  90% {
+    opacity: 0.25;
+  }
+}
+
+/* ============================================================
+   Aurora background
+   Usage: add the "aurora" class to any element — soft colored
+   light blobs drift slowly behind the content.
+   Tune with the optional color variables:
+     --aurora-a, --aurora-b, --aurora-c (first layer)
+     --aurora-d, --aurora-e, --aurora-f (second layer)
+   ============================================================ */
+.aurora {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.aurora::before,
+.aurora::after {
+  content: "";
+  position: absolute;
+  inset: -25%;
+  z-index: -1;
+  pointer-events: none;
+  background-repeat: no-repeat;
+}
+
+.aurora::before {
+  background:
+    radial-gradient(40% 40% at 30% 35%, var(--aurora-a, rgba(124, 77, 255, 0.55)), transparent 70%),
+    radial-gradient(35% 35% at 70% 25%, var(--aurora-b, rgba(0, 210, 255, 0.5)), transparent 70%),
+    radial-gradient(45% 45% at 55% 75%, var(--aurora-c, rgba(255, 70, 200, 0.45)), transparent 70%);
+  filter: blur(40px);
+  animation: aurora-drift 18s ease-in-out infinite alternate;
+}
+
+.aurora::after {
+  background:
+    radial-gradient(38% 38% at 65% 60%, var(--aurora-d, rgba(255, 150, 60, 0.4)), transparent 70%),
+    radial-gradient(40% 40% at 20% 75%, var(--aurora-e, rgba(60, 255, 180, 0.4)), transparent 70%),
+    radial-gradient(30% 30% at 45% 20%, var(--aurora-f, rgba(90, 120, 255, 0.45)), transparent 70%);
+  filter: blur(45px);
+  animation: aurora-drift-2 24s ease-in-out infinite alternate;
+}
+
+@keyframes aurora-drift {
+  0% {
+    transform: translate3d(-6%, -4%, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(6%, 5%, 0) scale(1.12);
+  }
+
+  100% {
+    transform: translate3d(-4%, 6%, 0) scale(0.95);
+  }
+}
+
+@keyframes aurora-drift-2 {
+  0% {
+    transform: translate3d(5%, 6%, 0) scale(1.05);
+  }
+
+  100% {
+    transform: translate3d(-7%, -5%, 0) scale(0.92);
+  }
 }
