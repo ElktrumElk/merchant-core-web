@@ -1,4 +1,5 @@
 import "./about.css";
+import Reveal from "../animations/Reveal";
 
 const audience = [
   {
@@ -33,18 +34,23 @@ const reasons = [
 const About = () => {
   return (
     <section className="about-section aurora" id="about">
-      <span className="badge">About Merchant Core</span>
-      <h1 className="about-title">Why Merchant Core?</h1>
-      <p className="about-intro">
-        Merchant Core is more than a point-of-sale app. It is the one place
-        where your sales, stock, credits, and records come together — replacing
-        the notebook, the calculator, and the worry. Built for businesses that
-        want clarity without complexity, it turns everyday chaos into a clear,
-        real-time picture of what is happening in your shop.
-      </p>
+      <Reveal whileInView={{ opacity: 1, y: 0 }}>
+        <span className="badge">About Merchant Core</span>
+        <h1 className="about-title">Why Merchant Core?</h1>
+      </Reveal>
+
+      <Reveal delay={0.1} whileInView={{ opacity: 1, y: 0 }}>
+        <p className="about-intro">
+          Merchant Core is more than a point-of-sale app. It is the one place
+          where your sales, stock, credits, and records come together — replacing
+          the notebook, the calculator, and the worry. Built for businesses that
+          want clarity without complexity, it turns everyday chaos into a clear,
+          real-time picture of what is happening in your shop.
+        </p>
+      </Reveal>
 
       <div className="about-grid">
-        <div className="about-card">
+        <Reveal className="about-card" whileInView={{ opacity: 1, y: 0 }}>
           <h3 className="about-card-title">Who Is It For?</h3>
           <ul className="about-list">
             {audience.map((item) => (
@@ -54,9 +60,9 @@ const About = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </Reveal>
 
-        <div className="about-card">
+        <Reveal delay={0.15} className="about-card" whileInView={{ opacity: 1, y: 0 }}>
           <h3 className="about-card-title">Why It Matters</h3>
           <ul className="about-list">
             {reasons.map((item) => (
@@ -66,7 +72,7 @@ const About = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

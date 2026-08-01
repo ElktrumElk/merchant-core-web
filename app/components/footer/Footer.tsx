@@ -1,4 +1,5 @@
 import "./footer.css";
+import Reveal from "../animations/Reveal";
 
 const REPO_URL = "https://github.com/favmaclegend-ops/MerchantCore";
 
@@ -38,7 +39,7 @@ const Footer = () => {
   return (
     <>
       <footer className="footer">
-        <div className="footer-grid">
+        <Reveal className="footer-grid" style={{ width: "100%" }} whileInView={{ opacity: 1, y: 0 }}>
           <div className="footer-brand">
             <h2>Merchant Core</h2>
             <p>Business Management Made Easy</p>
@@ -85,7 +86,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-        </div>
+        </Reveal>
 
         <div className="footer-bottom">
           <p>

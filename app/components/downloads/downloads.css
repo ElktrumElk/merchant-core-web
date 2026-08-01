@@ -11,16 +11,25 @@
 
 .badge {
     font-size: 1.2rem;
+    text-align: center;
+}
+.rev {
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .gt {
     font-size: clamp(1rem, 3svw, 4rem);
     font-weight: bolder;
+    text-align: center;
 }
 
 .d-des {
     color: grey;
     max-width: 600px;
     text-align: center;
+    margin: 0 auto;
 }
 
 .store-badges {

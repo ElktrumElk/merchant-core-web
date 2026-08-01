@@ -1,4 +1,5 @@
 import "./solution.css";
+import Reveal from "../animations/Reveal";
 import {
   ShoppingCart,
   Layers,
@@ -54,13 +55,15 @@ const Solution = () => {
         <h1 className="solution-title">Issues & Solutions</h1>
 
         <div className="starfield issue-card">
-          <div className="is-cd-div">
-            <h2>Issues arise every day</h2>
-            <p>
-              Issues arise every day. Outages are inevitable, but with the
-              right approach, chaos isn&apos;t.
-            </p>
-          </div>
+          <Reveal whileInView={{ opacity: 1, y: 0 }}>
+            <div className="is-cd-div">
+              <h2>Issues arise every day</h2>
+              <p>
+                Issues arise every day. Outages are inevitable, but with the
+                right approach, chaos isn&apos;t.
+              </p>
+            </div>
+          </Reveal>
         </div>
 
         <div className="track-sol-exp">
@@ -69,7 +72,12 @@ const Solution = () => {
               key={title}
               className={`sol-exp-item ${i % 2 === 0 ? "left" : "right"}`}
             >
-              <div className="sol-exp-card">
+              <Reveal
+                className="sol-exp-card"
+                initial={{ opacity: 0, x: i % 2 === 0 ? -40 : 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
                 <div className="sol-exp-card-header">
                   <span className="sol-exp-card-icon">
                     <Icon size={24} color="#1a1a1a" />
@@ -77,7 +85,7 @@ const Solution = () => {
                   <h3>{title}</h3>
                 </div>
                 <p>{description}</p>
-              </div>
+              </Reveal>
             </div>
           ))}
         </div>

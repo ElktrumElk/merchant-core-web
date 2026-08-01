@@ -1,5 +1,6 @@
-import Image from "next/image";
 import "./feature.css";
+import Reveal from "../animations/Reveal";
+import Image from "next/image";
 
 const features = [
   {
@@ -50,14 +51,21 @@ const Feature = () => {
         <h1 className="solution-title">What Are The Features ?</h1>
 
         {features.map((feature, key) => (
-          <figure key={key} className={"fig"}>
-            <Image src={feature.src} className={feature.pos == 'right'? "img-cnt img-flip":"img-cnt"} alt={feature.name} width={3200} height={3200}/>
+          <Reveal
+            key={key}
+            className={"fig"}
+            style={{ width: "100%" }}
+            initial={{ opacity: 0, x: feature.pos == 'right' ? 40 : -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <Image src={feature.src} alt={feature.name} width={3500} height={3500} className={feature.pos == 'right'? "img-cnt img-flip":"img-cnt"} />
 
             <figcaption className={feature.pos == 'right' ? 'x des-flip': 'x'}>
               <h1 className="img-title">{feature.name}</h1>
               <p>{feature.des}</p>
             </figcaption>
-          </figure>
+          </Reveal>
         ))}
       </section>
     </>
