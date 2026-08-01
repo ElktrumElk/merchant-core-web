@@ -1,3 +1,4 @@
+import About from "./components/about/About";
 import Downloads from "./components/downloads/Downloads";
 import Feature from "./components/features/Features";
 import Footer from "./components/footer/Footer";
@@ -8,6 +9,7 @@ export default function Home() {
   return (
     <main className="main">
       <Hero />
+      <About />
       <Solution />
       <Feature />
       <Downloads />

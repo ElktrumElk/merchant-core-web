@@ -23,6 +23,7 @@ const team = [
   {
     name: "Favour Macurlay",
     github: "https://github.com/favmaclegend-ops",
+    x: 'https://x.com/favmaclegend'
   },
 ];
 

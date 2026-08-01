@@ -15,6 +15,30 @@ const geistMono = Geist_Mono({
 
 const baseUrl = new URL("https://merchant-core-bay.vercel.app");
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Merchant Core",
+  url: baseUrl.toString(),
+  description:
+    "Track sales, expenses, inventory, customers, and business records — all in one secure platform.",
+  author: [
+    {
+      "@type": "Person",
+      name: "Elkanah Cole",
+      url: "https://github.com/ElktrumElk",
+      sameAs: ["https://github.com/ElktrumElk"],
+    },
+    {
+      "@type": "Person",
+      name: "Favour Macurlay",
+      url: "https://github.com/favmaclegend-ops",
+      image: "https://avatars.githubusercontent.com/u/190496474?v=4",
+      sameAs: ["https://github.com/favmaclegend-ops"],
+    },
+  ],
+};
+
 export const metadata: Metadata = {
   metadataBase: baseUrl,
   title: {
@@ -22,7 +46,7 @@ export const metadata: Metadata = {
     template: "%s | Merchant Core",
   },
   description:
-    "Track sales, expenses, inventory, customers, and business records — all in one secure platform. Point of sale, credit ledger, and dashboard for small businesses. Built by Elkanah Cole & Favour Macurlay.",
+    "Get track of your business by keeping record of what you sell, what you buy, and how many debtors are overdue with easy revenue calcution and much more.",
   applicationName: "Merchant Core",
   authors: [
     { name: "Elkanah Cole", url: "https://github.com/ElktrumElk" },
@@ -40,6 +64,7 @@ export const metadata: Metadata = {
     "expense tracking",
     "small business software",
     "free inventory app",
+    "currency"
   ],
   creator: "Elkanah Cole & Favour Macurlay",
   publisher: "Merchant Core",
@@ -55,7 +80,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "/",
+    canonical: "https://merchant-core-bay.vercel.app",
   },
   openGraph: {
     type: "website",
@@ -74,6 +99,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Merchant Core — Business Management Made Easy",
@@ -96,6 +122,10 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Header />
         {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         </body>
     </html>
   );

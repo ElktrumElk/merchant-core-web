@@ -6,7 +6,10 @@
 
   --global-border: 1px solid rgba(255, 217, 0, 0.186);
   scroll-behavior: smooth;
-  scroll-margin-block: 4rem;
+}
+
+section[id] {
+  scroll-margin-top: 6rem;
 }
 
 @theme inline {
