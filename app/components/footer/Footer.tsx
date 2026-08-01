@@ -1,7 +1,7 @@
 import "./footer.css";
 import Reveal from "../animations/Reveal";
 
-const REPO_URL = "https://github.com/favmaclegend-ops/MerchantCore";
+const REPO_URL = "https://github.com/ElktrumElk/merchant-core-web";
 
 const GitHubIcon = () => (
   <svg viewBox="0 0 24 24" width={18} height={18} fill="currentColor" aria-hidden="true">
@@ -49,7 +49,7 @@ const Footer = () => {
             </p>
             <a href={REPO_URL} target="_blank" rel="noopener noreferrer" className="repo-link">
               <GitHubIcon />
-              <span>github.com/favmaclegend-ops/MerchantCore</span>
+              <span>github.com/ElktrumElk/merchant-core-web</span>
             </a>
           </div>
 

@@ -1,11 +1,47 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-
+:root,
+[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --muted: #d7d7d7f7;
+  --surface: rgba(1, 33, 65, 0.44);
+  --surface-strong: rgba(1, 33, 65, 0.9);
+  --img-bg: rgba(1, 33, 65, 0.214);
+  --img-gradient: linear-gradient(to bottom right, rgb(151, 154, 156) 20%, rgb(1, 21, 40));
+  --accent: #ffdf3d;
+  --accent-dim: rgba(255, 217, 0, 0.377);
+  --on-accent: #ffffff;
+  --badge-bg: rgba(255, 255, 255, 0.05);
+  --hover-accent: rgba(255, 217, 0, 0.1);
   --global-border: 1px solid rgba(255, 217, 0, 0.186);
+  --star-color: #ffffff;
+  color-scheme: dark;
   scroll-behavior: smooth;
+}
+
+[data-theme="light"] {
+  --background: #f7f6f2;
+  --foreground: #1a1a1a;
+  --muted: #4a4a4a;
+  --surface: rgba(255, 255, 255, 0.85);
+  --surface-strong: rgba(255, 255, 255, 0.95);
+  --img-bg: rgba(0, 0, 0, 0.06);
+  --img-gradient: linear-gradient(to bottom right, rgb(210, 210, 212) 20%, rgb(200, 200, 205));
+  --accent: #8a6d00;
+  --accent-dim: rgba(138, 109, 0, 0.4);
+  --on-accent: #1a1a1a;
+  --badge-bg: rgba(0, 0, 0, 0.05);
+  --hover-accent: rgba(138, 109, 0, 0.12);
+  --global-border: 1px solid rgba(138, 109, 0, 0.25);
+  --star-color: #b8b8b8;
+  --aurora-a: rgba(124, 77, 255, 0.25);
+  --aurora-b: rgba(0, 210, 255, 0.22);
+  --aurora-c: rgba(255, 70, 200, 0.2);
+  --aurora-d: rgba(255, 150, 60, 0.18);
+  --aurora-e: rgba(60, 255, 180, 0.18);
+  --aurora-f: rgba(90, 120, 255, 0.2);
+  color-scheme: light;
 }
 
 section[id] {
@@ -17,13 +53,6 @@ section[id] {
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {

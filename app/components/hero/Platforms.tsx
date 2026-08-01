@@ -79,7 +79,7 @@ export type Platform = {
 };
 
 export const platforms: Platform[] = [
-  { name: "Vercel", Icon: VercelIcon, color: "#ffffff" },
+  { name: "Vercel", Icon: VercelIcon, color: "var(--foreground)" },
   { name: "Google", Icon: GoogleIcon, color: "#4285F4" },
   { name: "Stripe", Icon: StripeIcon, color: "#635BFF" },
   { name: "PayPal", Icon: PayPalIcon, color: "#0070E0" },

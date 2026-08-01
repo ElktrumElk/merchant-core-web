@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
-import { Close, HambuggerMenu } from "elk-components/icons";
+import { useSyncExternalStore, useState } from "react";
+import { Close, HambuggerMenu, Moon, Sun } from "elk-components/icons";
 import "./header.css";
 
 const navLinks = [
@@ -11,8 +11,34 @@ const navLinks = [
   { label: "Downloads", href: "#downloads" },
 ];
 
+let themeListeners: (() => void)[] = [];
+
+const subscribeTheme = (listener: () => void) => {
+  themeListeners.push(listener);
+  return () => {
+    themeListeners = themeListeners.filter((l) => l !== listener);
+  };
+};
+
+const getThemeSnapshot = (): "light" | "dark" =>
+  document.documentElement.dataset.theme === "light" ? "light" : "dark";
+
+const emitThemeChange = () => themeListeners.forEach((l) => l());
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const theme = useSyncExternalStore(
+    subscribeTheme,
+    getThemeSnapshot,
+    () => "dark"
+  );
+
+  const toggleTheme = () => {
+    const next = theme === "light" ? "dark" : "light";
+    document.documentElement.dataset.theme = next;
+    localStorage.setItem("theme", next);
+    emitThemeChange();
+  };
 
   return (
     <header className={`header glass-effect ${menuOpen ? "menu-open" : ""}`}>
@@ -37,6 +63,14 @@ const Header = () => {
         >
           <span>Get Started</span>
         </Link>
+
+        <button
+          className="theme-toggle"
+          onClick={toggleTheme}
+          aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
+        >
+          {theme === "light" ? <Moon size={18} /> : <Sun size={18} />}
+        </button>
 
         <button
           className="hamburger"

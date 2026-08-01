@@ -13,7 +13,7 @@ Merchant Core is a single-page marketing site for a business management app. It 
 - **Platform name:** Merchant Core
 - **Tagline:** Business Management Made Easy
 - **Live URL:** `https://merchant-core-bay.vercel.app` (this is also `metadataBase` and the canonical domain)
-- **Repo:** `https://github.com/favmaclegend-ops/MerchantCore`
+- **Repo:** `https://github.com/ElktrumElk/merchant-core-web`
 - **Team:** Elkanah Cole (`github.com/ElktrumElk`, `x.com/ElktrumElk`) and Favour Macurlay (`github.com/favmaclegend-ops`)
 
 ## Tech conventions

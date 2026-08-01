@@ -2,10 +2,14 @@
 
 **Business Management Made Easy**
 
-Merchant Core is a web application for small businesses and shop owners to track sales, expenses, inventory, customers, and business records — all in one secure platform.
+Merchant Core is a web app for small businesses and shop owners to track sales, expenses, inventory, customers, and business records — all in one secure platform.
 
-**Live site:** https://merchant-core-bay.vercel.app
-**Repository:** https://github.com/favmaclegend-ops/MerchantCore
+- **Live app:** https://merchant-core-bay.vercel.app
+- **Source code:** https://github.com/ElktrumElk/merchant-core-web
+
+## What is Merchant Core?
+
+Merchant Core replaces scattered spreadsheets and paper ledgers with a single dashboard for running a shop or small business. It is a single-page marketing site that presents the product, its features, and how to get started.
 
 ## Features
 
@@ -16,32 +20,48 @@ Merchant Core is a web application for small businesses and shop owners to track
 - **Calculator** — Quick in-app calculations so you never have to switch to a separate calculator.
 - **Security** — Your business data stays safe behind secure access, so only the right people can manage your records.
 
+## How to use Merchant Core
+
+The live app is a single page with the following sections:
+
+1. **Hero** — the product name, tagline, and primary **Get Started** button.
+2. **Why Merchant Core** — the problems the app solves for everyday shop owners.
+3. **Solution** — how the app replaces manual record keeping.
+4. **Features** — the six core tools described above.
+5. **Downloads** — store badges for the app.
+
+Click **Get Started** in the header to begin using the product.
+
+### Setting up an account
+
+1. Open **https://merchant-core-bay.vercel.app**.
+2. Click the **Get Started** button in the top navigation.
+3. Follow the on-screen sign-up flow to create your account and set up your business profile.
+4. Once signed in, start adding products under **Inventory** and recording sales with **Point of Sale**.
+
+### Dark and light mode
+
+Use the sun/moon button in the header to switch between dark and light mode. Your choice is remembered on your device.
+
 ## Tech Stack
 
 - **Framework:** [Next.js](https://nextjs.org) 16 (App Router)
 - **UI:** React 19
 - **Icons:** [elk-components](https://www.npmjs.com/package/elk-components)
-- **Styling:** CSS modules per component, Tailwind CSS v4 utility setup
+- **Styling:** CSS per component, Tailwind CSS v4 utility setup
 - **Testing:** Vitest + Testing Library
 - **Linting:** ESLint
 
-## Getting Started
+## Development
 
-Install dependencies:
+Install dependencies and run locally:
 
 ```bash
 npm install
-```
-
-Run the development server:
-
-```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. The page auto-updates as you edit the source files.
-
-## Available Scripts
+Open [http://localhost:3000](http://localhost:3000) to see the result.
 
 | Command            | Description                      |
 | ------------------ | -------------------------------- |
@@ -50,37 +70,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 | `npm run start`    | Start the production server      |
 | `npm run lint`     | Run ESLint                       |
 | `npm run test`     | Run the Vitest test suite        |
-
-## Project Structure
-
-```
-app/
-├── components/
-│   ├── downloads/   # Store-badge download section
-│   ├── features/    # Feature list section
-│   ├── footer/      # Site footer with team info
-│   ├── header/      # Sticky navigation header
-│   ├── hero/        # Hero + platform marquee
-│   └── solution/    # Issues & solutions timeline
-├── layout.tsx       # Root layout, metadata, JSON-LD
-├── page.tsx         # Landing page composition
-├── globals.css      # Global styles + starfield/aurora effects
-├── robots.ts        # Generated robots.txt
-└── sitemap.ts       # Generated sitemap.xml
-```
-
-## SEO
-
-The site ships with production-ready SEO:
-
-- **Metadata** (`app/layout.tsx`) — title/description, robots directives, canonical URL, Open Graph and Twitter cards.
-- **Author images** — added via schema.org JSON-LD structured data (`Person` schema), since Next.js's native `authors` field does not support images.
-- **`app/robots.ts`** — allows all major crawlers and points to the sitemap.
-- **`app/sitemap.ts`** — root URL plus in-page section anchors.
-
-## Deployment
-
-The easiest way to deploy is the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js. See the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 ## Team
 

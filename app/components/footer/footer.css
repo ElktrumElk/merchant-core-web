@@ -21,7 +21,7 @@
 }
 
 .footer-brand > p {
-  color: grey;
+  color: var(--muted);
 }
 
 .footer-desc {
@@ -35,7 +35,7 @@
   align-items: center;
   gap: .5rem;
   margin-top: .5rem;
-  color: #ededed;
+  color: var(--foreground);
   font-size: .9rem;
   text-decoration: none;
   border: var(--global-border);
@@ -45,8 +45,8 @@
 }
 
 .repo-link:hover {
-  border-color: rgba(255, 217, 0, 0.5);
-  color: gold;
+  border-color: var(--accent-dim);
+  color: var(--accent);
 }
 
 .footer-nav h3,
@@ -70,13 +70,13 @@
 }
 
 .footer-nav a {
-  color: #ededed;
+  color: var(--foreground);
   text-decoration: none;
   transition: color .15s ease;
 }
 
 .footer-nav a:hover {
-  color: gold;
+  color: var(--accent);
 }
 
 .team-member {
@@ -99,13 +99,13 @@
 .team-links a {
   display: flex;
   align-items: center;
-  color: #ededed;
+  color: var(--foreground);
   text-decoration: none;
   transition: color .15s ease;
 }
 
 .team-links a:hover {
-  color: gold;
+  color: var(--accent);
 }
 
 .footer-bottom {
@@ -124,7 +124,7 @@
 }
 
 .footer-bottom p {
-  color: grey;
+  color: var(--muted);
   font-size: .9rem;
   margin: 0;
 }

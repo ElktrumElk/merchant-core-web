@@ -24,7 +24,7 @@
   justify-content: center;
   width: 50%;
   height: 20rem;
-  background: linear-gradient(to bottom right, rgb(151, 154, 156) 20%, rgb(1, 21, 40));
+  background: var(--img-gradient);
   border-radius: 1rem;
   object-fit: cover;
   
@@ -46,7 +46,7 @@
   font-size: 1rem;
   font-weight: 600;
   padding: 1rem;
-  border-bottom: 1px solid rgba(255, 217, 0, 0.377);
+  border-bottom: 1px solid var(--accent-dim);
   
 }
 
