@@ -5,6 +5,7 @@ import { Animation } from "elk-components";
 type RevealProps = {
   children: React.ReactNode;
   className?: string;
+  id?: string;
   style?: React.CSSProperties;
   initial?: Record<string, unknown>;
   animate?: Record<string, unknown>;
@@ -17,6 +18,7 @@ type RevealProps = {
 const Reveal = ({
   children,
   className,
+  id,
   style = { width: "100%" },
   initial = { opacity: 0, y: 40 },
   animate,
@@ -30,6 +32,7 @@ const Reveal = ({
   return (
     <Animation
       className={className}
+      gest={id ? { id } : undefined}
       style={style}
       child={() => <>{children}</>}
       initial={initial}

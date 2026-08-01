@@ -32,6 +32,7 @@ const navLinks = [
   { label: "Solution", href: "#solution" },
   { label: "Features", href: "#features" },
   { label: "Downloads", href: "#downloads" },
+  { label: "User Guide", href: "/guides" },
   { label: "Source Code", href: REPO_URL },
 ];
 
