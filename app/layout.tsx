@@ -13,38 +13,73 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const metadataBase = new URL("https://merchant-core-bay.vercel.app");
+const baseUrl = new URL("https://merchant-core-bay.vercel.app");
 
 export const metadata: Metadata = {
-  metadataBase,
-  title: "Merchant Core — Business Management Made Easy",
+  metadataBase: baseUrl,
+  title: {
+    default: "Merchant Core — Business Management Made Easy",
+    template: "%s | Merchant Core",
+  },
   description:
-    "Track sales, expenses, inventory, customers, and business records — all in one secure platform. Built by Elkanah Cole & Favour Macurlay.",
+    "Track sales, expenses, inventory, customers, and business records — all in one secure platform. Point of sale, credit ledger, and dashboard for small businesses. Built by Elkanah Cole & Favour Macurlay.",
   applicationName: "Merchant Core",
   authors: [
     { name: "Elkanah Cole", url: "https://github.com/ElktrumElk" },
     { name: "Favour Macurlay", url: "https://github.com/favmaclegend-ops" },
   ],
+  generator: "Next.js",
   keywords: [
     "Merchant Core",
     "point of sale",
+    "POS",
     "inventory management",
     "credit ledger",
     "business management",
+    "sales tracking",
+    "expense tracking",
+    "small business software",
+    "free inventory app",
   ],
+  creator: "Elkanah Cole & Favour Macurlay",
+  publisher: "Merchant Core",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
-    url: "/",
+    locale: "en_US",
+    url: baseUrl,
     title: "Merchant Core — Business Management Made Easy",
     description:
       "Track sales, expenses, inventory, customers, and business records — all in one secure platform.",
     siteName: "Merchant Core",
+    images: [
+      {
+        url: "/merchant-core-dark.png",
+        width: 1200,
+        height: 630,
+        alt: "Merchant Core — Business Management Made Easy",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Merchant Core — Business Management Made Easy",
     description:
       "Track sales, expenses, inventory, customers, and business records — all in one secure platform.",
+    images: ["/merchant-core-dark.png"],
   },
 };
 

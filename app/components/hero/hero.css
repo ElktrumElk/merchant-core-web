@@ -138,3 +138,29 @@
     }
 }
 
+@media (max-width: 640px) {
+    .slogan-wrapper {
+        margin-block-start: 2rem;
+        gap: 1.5rem;
+    }
+
+    .button-cnt {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .button-cnt > button,
+    .button-cnt > .button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .merchant-core-img-cnt {
+        padding: .5rem;
+    }
+
+    .platform-item span {
+        font-size: 1rem;
+    }
+}
+

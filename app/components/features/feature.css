@@ -58,3 +58,38 @@
   flex-direction: column;
   gap: 1rem;
 }
+
+@media (max-width: 640px) {
+  .feature-section {
+    gap: 2rem;
+  }
+
+  .fig {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .img-cnt {
+    width: 100%;
+    height: 14rem;
+  }
+
+  .des-flip {
+    order: 0;
+  }
+
+  .img-flip {
+    order: 0;
+  }
+
+  .x {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .img-title {
+    font-size: 1.25rem;
+    padding: 0.75rem;
+  }
+}

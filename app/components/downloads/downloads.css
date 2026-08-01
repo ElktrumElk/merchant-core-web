@@ -78,3 +78,10 @@
     font-size: 1.05rem;
     white-space: nowrap;
 }
+
+@media (max-width: 480px) {
+    .store-badge {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
