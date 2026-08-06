@@ -29,7 +29,7 @@
     
 }
 
-.is-cd-div > h2 {
+.is-cd-div > h3 {
     font-size: 2rem;
     font-weight: bolder;
     color: black;
@@ -121,7 +121,7 @@
     box-shadow: 0 0 14px var(--accent-dim), inset 0 0 10px rgba(255, 255, 255, 0.35);
 }
 
-.sol-exp-card-header > h3 {
+.sol-exp-card-header > h4 {
     font-size: 1.1rem;
     font-weight: bolder;
     color: var(--accent);
@@ -140,7 +140,7 @@
         padding: 1.25rem;
     }
 
-    .is-cd-div > h2 {
+    .is-cd-div > h3 {
         font-size: 1.5rem;
     }
 

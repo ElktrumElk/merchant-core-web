@@ -34,7 +34,7 @@ const Downloads = () => {
       <section className="download" id="downloads">
         <Reveal whileInView={{ opacity: 1, y: 0 }} className="rev">
           <span className="badge">Merchant Core</span>
-          <h1 className="gt">Get Started for Free</h1>
+          <h2 className="gt">Get Started for Free</h2>
         </Reveal>
 
         <Reveal delay={0.1} whileInView={{ opacity: 1, y: 0,  }}>

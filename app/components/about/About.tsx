@@ -11,6 +11,10 @@ const audience = [
     des: "Founders who need real-time numbers on sales, stock, and cash flow so every decision is backed by data, not guesswork.",
   },
   {
+    title: "Teams & Growing Organisations",
+    des: "Businesses that need more than one login — with Super Admins, Admins, HRM and Finance managers, and staff working in one shared workspace.",
+  },
+  {
     title: "Done With Paper & Spreadsheets",
     des: "Businesses still tracking who owes them in notebooks and memory. Merchant Core brings every record into one trusted place.",
   },
@@ -19,11 +23,15 @@ const audience = [
 const reasons = [
   {
     title: "Never Lose Another Sale",
-    des: "Every transaction is captured the instant it happens — cash, card, or credit — so nothing slips through the cracks.",
+    des: "Every transaction is captured the instant it happens — cash, card, or mobile — so nothing slips through the cracks.",
   },
   {
     title: "Always Know Who Owes You",
     des: "Credits and due dates are tracked automatically, with alerts before debts go stale or turn into losses.",
+  },
+  {
+    title: "Run a Team Without Chaos",
+    des: "Role-based organisation workspaces, payroll, attendance, and a transparent activity feed keep a whole team aligned.",
   },
   {
     title: "Make Smarter Decisions",
@@ -36,7 +44,7 @@ const About = () => {
     <section className="about-section aurora" id="about">
       <Reveal whileInView={{ opacity: 1, y: 0 }}>
         <span className="badge">About Merchant Core</span>
-        <h1 className="about-title">Why Merchant Core?</h1>
+        <h2 className="about-title">Why Merchant Core?</h2>
       </Reveal>
 
       <Reveal delay={0.1} whileInView={{ opacity: 1, y: 0 }}>

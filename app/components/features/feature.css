@@ -7,6 +7,26 @@
   max-width: 1000px;
 }
 
+.feature-intro {
+  max-width: 46rem;
+  text-align: center;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.feature-group-title {
+  width: 100%;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--accent-dim);
+}
+
 .fig {
   display: flex;
   align-items: center;

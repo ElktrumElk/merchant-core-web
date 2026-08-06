@@ -11,6 +11,10 @@ const toc = [
   { href: "#credit-ledger", label: "Credit Ledger" },
   { href: "#customers", label: "Customers" },
   { href: "#calculator", label: "Calculator" },
+  { href: "#marketplace", label: "Marketplace & Ads" },
+  { href: "#spreadsheet", label: "Spreadsheet" },
+  { href: "#organisation", label: "Organisation Workspace" },
+  { href: "#notifications", label: "Notifications & Alerts" },
   { href: "#settings", label: "Settings" },
   { href: "#faq", label: "FAQ" },
 ];
@@ -43,8 +47,10 @@ const Guide = () => {
         </h1>
         <p className="guide-hero-desc">
           A complete walkthrough of every feature in the Merchant Core
-          application — from creating your first account to running sales and
-          tracking who owes you.
+          application — from creating your first account to running sales,
+          tracking who owes you, selling on the marketplace, using the
+          spreadsheet workspace, and running an organisation with finance,
+          HRM, and payroll.
         </p>
       </Reveal>
 
@@ -123,12 +129,22 @@ const Guide = () => {
             { label: "POS", desc: "Ring up sales and manage carts" },
             { label: "Customers", desc: "Directory of every customer" },
             { label: "Calculator", desc: "Business math, margins, and currency conversion" },
+            { label: "Market", desc: "Browse shops, cart, checkout, and billboard ads" },
+            { label: "Spreadsheet", desc: "Excel-style workbook editor with autosave" },
+            { label: "Notifications", desc: "Org-wide activity feed with unread badge" },
           ].map((item) => (
             <div key={item.label} className="guide-nav-item">
               <span className="guide-nav-label">{item.label}</span>
               <span className="guide-nav-desc">{item.desc}</span>
             </div>
           ))}
+        </div>
+
+        <div className="guide-callout">
+          <strong>Organisation accounts</strong> see additional navigation
+          items — <em>Users</em>, <em>Finance</em>, and <em>HRM</em> — based on
+          their role (Super Admin, Admin, HRM Manager, or Finance Manager), plus
+          a <em>My Attendance</em> self check-in page for every member.
         </div>
       </Reveal>
 
@@ -147,7 +163,7 @@ const Guide = () => {
 
         <div className="guide-cards">
           <div className="guide-card">
-            <h4 className="guide-card-title">Stat cards</h4>
+            <h3 className="guide-card-title">Stat cards</h3>
             <p>
               <strong>Total Revenue</strong> — lifetime revenue plus this
               month&apos;s figure.
@@ -163,7 +179,7 @@ const Guide = () => {
             </p>
           </div>
           <div className="guide-card">
-            <h4 className="guide-card-title">Revenue Trend</h4>
+            <h3 className="guide-card-title">Revenue Trend</h3>
             <p>
               A line chart showing monthly revenue for the last six months.
               The more sales you record, the more meaningful this chart
@@ -171,7 +187,7 @@ const Guide = () => {
             </p>
           </div>
           <div className="guide-card">
-            <h4 className="guide-card-title">Recent Transactions</h4>
+            <h3 className="guide-card-title">Recent Transactions</h3>
             <p>
               The last five transactions in the system — each tagged as a
               sale, payment, or purchase, with a status of completed or
@@ -180,7 +196,7 @@ const Guide = () => {
             </p>
           </div>
           <div className="guide-card">
-            <h4 className="guide-card-title">Alerts</h4>
+            <h3 className="guide-card-title">Alerts</h3>
             <p>
               Automatic notifications for low-stock items and overdue credit
               accounts. Alerts are generated from your inventory and credit
@@ -247,6 +263,11 @@ const Guide = () => {
           <strong>Filtering:</strong> use the <em>All</em>, <em>Low Stock</em>,
           and <em>Out</em> tabs to narrow the list. A search bar at the top
           filters by product name.
+          <br />
+          <strong>Marketplace sync:</strong> items listed on the market are
+          marked <em>On market</em> / <em>Listed</em> with a{" "}
+          <em>Remove from market</em> button, and editing a product here
+          updates its marketplace listing automatically.
         </div>
       </Reveal>
 
@@ -324,7 +345,7 @@ const Guide = () => {
 
         <div className="guide-cards">
           <div className="guide-card">
-            <h4 className="guide-card-title">Statuses</h4>
+            <h3 className="guide-card-title">Statuses</h3>
             <p>
               <span className="guide-tag guide-tag-active">Active</span>{" "}
               — paid on time or settled.
@@ -337,7 +358,7 @@ const Guide = () => {
             </p>
           </div>
           <div className="guide-card">
-            <h4 className="guide-card-title">Add a credit entry</h4>
+            <h3 className="guide-card-title">Add a credit entry</h3>
             <p>
               Click <em>+ New Entry</em>. Enter the customer name, an
               optional customer code, and the initial balance owed. Click{" "}
@@ -345,7 +366,7 @@ const Guide = () => {
             </p>
           </div>
           <div className="guide-card">
-            <h4 className="guide-card-title">Record a payment</h4>
+            <h3 className="guide-card-title">Record a payment</h3>
             <p>
               Click the <em>•••</em> menu on any row, then select{" "}
               <em>Record Payment</em>. Enter the amount paid and click{" "}
@@ -353,7 +374,7 @@ const Guide = () => {
             </p>
           </div>
           <div className="guide-card">
-            <h4 className="guide-card-title">Toggle status</h4>
+            <h3 className="guide-card-title">Toggle status</h3>
             <p>
               Use the <em>•••</em> menu to toggle a customer between{" "}
               <em>Active</em> and <em>Overdue</em>. The filter at the top
@@ -430,7 +451,7 @@ const Guide = () => {
 
         <div className="guide-cards">
           <div className="guide-card">
-            <h4 className="guide-card-title">Basic Calculator</h4>
+            <h3 className="guide-card-title">Basic Calculator</h3>
             <p>
               Standard arithmetic — add, subtract, multiply, divide,
               percentage, and sign flip. Same layout as a physical
@@ -438,7 +459,7 @@ const Guide = () => {
             </p>
           </div>
           <div className="guide-card">
-            <h4 className="guide-card-title">Business Calculator</h4>
+            <h3 className="guide-card-title">Business Calculator</h3>
             <p>
               Six tools for everyday business math:
             </p>
@@ -452,12 +473,251 @@ const Guide = () => {
             </ul>
           </div>
           <div className="guide-card">
-            <h4 className="guide-card-title">Currency Converter</h4>
+            <h3 className="guide-card-title">Currency Converter</h3>
             <p>
               Convert between 10 currencies in real time: NLE, USD, EUR,
               GBP, NGN, GHS, KES, ZAR, INR, and CNY. Enter an amount,
               pick the source and target currencies, and the result
               appears instantly.
+            </p>
+          </div>
+        </div>
+      </Reveal>
+
+      {/* ── Marketplace & Billboard Ads ──────────────────── */}
+      <Reveal
+        className="guide-section"
+        id="marketplace"
+        whileInView={{ opacity: 1, y: 0 }}
+      >
+        <h2 className="guide-section-title">Marketplace &amp; Billboard Ads</h2>
+        <p className="guide-section-intro">
+          The Marketplace is an in-app shopping hub at{" "}
+          <strong>/home/market</strong>. Shoppers browse shops and their
+          products, build a cart, and check out — while a billboard beside the
+          top-rated shops plays short, muted, autoplaying video adverts.
+        </p>
+
+        <div className="guide-cards">
+          <div className="guide-card">
+            <h3 className="guide-card-title">Browse shops</h3>
+            <p>
+              The hub lists shops and their products, plus a{" "}
+              <em>top-rated</em> panel. Open a shop profile (for example{" "}
+              <em>sunrise_mart@123456</em>) to see its overview, map location,
+              products, and ratings. Category tabs and search narrow the
+              product grid.
+            </p>
+          </div>
+          <div className="guide-card">
+            <h3 className="guide-card-title">Cart &amp; checkout</h3>
+            <p>
+              Click <em>Add to cart</em> on any product. The cart panel (a
+              side column on desktop, a slide-up overlay on mobile) lets you
+              adjust quantities, remove items, and see the subtotal, 5% tax,
+              and total. Checkout routes the order to every shop that owns an
+              item and confirms with an &quot;Order sent to shops&quot;
+              dialog. Empty carts cannot be checked out.
+            </p>
+          </div>
+          <div className="guide-card">
+            <h3 className="guide-card-title">Billboard ads</h3>
+            <p>
+              The billboard plays <strong>exactly three</strong> randomly
+              picked adverts, one at a time, looping forever. Each advert is a
+              muted video with no controls; clips without video fall back to a
+              poster image and auto-advance. Clicking an advert opens its{" "}
+              <em>visitLink</em> in a new tab.
+            </p>
+          </div>
+          <div className="guide-card">
+            <h3 className="guide-card-title">Open your own shop</h3>
+            <p>
+              Click <em>Upload to shop</em> in the POS page header or under
+              Settings. If you have no shop yet, a create-shop form appears;
+              otherwise you pick POS items in{" "}
+              <em>All items</em> / <em>Selected items</em> modes. Already
+              uploaded items are highlighted so nothing is double-added. On
+              your own shop page, an <em>Add new items</em> button opens the
+              same panel scoped to that shop.
+            </p>
+          </div>
+          <div className="guide-card">
+            <h3 className="guide-card-title">Keep the market in sync</h3>
+            <p>
+              Items listed on the market are marked <em>On market</em> /
+              <em>Listed</em> in the Inventory page and the Supply Chain
+              tracker, where a <em>Remove from market</em> button takes them
+              down. Editing an inventory item&apos;s name, price, or stock
+              propagates live to its marketplace copy.
+            </p>
+          </div>
+        </div>
+      </Reveal>
+
+      {/* ── Spreadsheet ──────────────────────────────────── */}
+      <Reveal
+        className="guide-section"
+        id="spreadsheet"
+        whileInView={{ opacity: 1, y: 0 }}
+      >
+        <h2 className="guide-section-title">Spreadsheet Workspace</h2>
+        <p className="guide-section-intro">
+          The Spreadsheet page at <strong>/home/spreadsheet</strong> is a full
+          Excel-style editor built on the FortuneSheet engine. It replaces
+          hand-rolled grids with a battle-tested workbook workspace.
+        </p>
+
+        <div className="guide-cards">
+          <div className="guide-card">
+            <h3 className="guide-card-title">Workspace view</h3>
+            <p>
+              Cards list every saved workbook, newest first. Click{" "}
+              <em>New Workbook</em> to create one (this also posts an entry to
+              the organisation activity feed). The trash icon deletes a
+              workbook with a confirmation.
+            </p>
+          </div>
+          <div className="guide-card">
+            <h3 className="guide-card-title">Editor view</h3>
+            <p>
+              Opening a workbook loads the full spreadsheet grid with a
+              formula bar and cell toolbar. Changes are{" "}
+              <strong>autosaved on every edit</strong>, and an explicit{" "}
+              <em>Save / Ctrl+S</em> shows a &quot;Saved&quot; flash. You can
+              rename the workbook inline.
+            </p>
+          </div>
+          <div className="guide-card">
+            <h3 className="guide-card-title">Import &amp; export</h3>
+            <p>
+              <em>Import</em> accepts <strong>.xlsx</strong> and{" "}
+              <strong>.csv</strong> files; <em>Export to Excel</em> downloads
+              the current sheet. Formula-heavy Excel workbooks keep working
+              because data is stored in a compact cell format.
+            </p>
+          </div>
+          <div className="guide-card">
+            <h3 className="guide-card-title">Shareable deep links</h3>
+            <p>
+              Every workbook has its own <em>?id=&lt;workbookId&gt;</em> URL.
+              Share the link and the editor opens directly on that workbook.
+            </p>
+          </div>
+        </div>
+      </Reveal>
+
+      {/* ── Organisation Workspace ───────────────────────── */}
+      <Reveal
+        className="guide-section"
+        id="organisation"
+        whileInView={{ opacity: 1, y: 0 }}
+      >
+        <h2 className="guide-section-title">Organisation Workspace</h2>
+        <p className="guide-section-intro">
+          An Organisation is a multi-user business workspace. A person
+          registers an organisation and becomes its <strong>Super Admin</strong>,
+          then adds Admins, managers, and staff. Members log in with the
+          organisation name plus their own credentials.
+        </p>
+
+        <div className="guide-cards">
+          <div className="guide-card">
+            <h3 className="guide-card-title">Roles &amp; access</h3>
+            <p>
+              Five roles follow a clear hierarchy —{" "}
+              <strong>Super Admin</strong> (full control),{" "}
+              <strong>Admin</strong> (manages staff and managers, accesses
+              Finance and HRM), <strong>HRM Manager</strong> (HRM only),{" "}
+              <strong>Finance Manager</strong> (Finance only), and{" "}
+              <strong>Staff</strong> (POS, inventory, and daily work). The
+              Users page manages members, roles, and account status.
+            </p>
+          </div>
+          <div className="guide-card">
+            <h3 className="guide-card-title">Finance &amp; Accounting</h3>
+            <p>
+              For Super Admins, Admins, and Finance Managers: a{" "}
+              <em>General Ledger</em> of every income and expense, automated{" "}
+              <em>invoicing</em> (draft → sent → paid, or void),{" "}
+              <em>tax compliance</em> obligations with due dates, and a{" "}
+              <em>real-time balance sheet</em> that recomputes assets,
+              liabilities, and equity from live invoice and tax state.
+            </p>
+          </div>
+          <div className="guide-card">
+            <h3 className="guide-card-title">HRM &amp; Payroll</h3>
+            <p>
+              For Super Admins, Admins, and HRM Managers: manage the whole
+              employee lifecycle — <em>employees</em> (probation → active →
+              on-leave / terminated / retired), <em>payroll runs</em> per
+              period (gross, 10% tax, net), <em>time &amp; attendance</em> with
+              a today roster, <em>performance reviews</em> scored 1–5, and{" "}
+              <em>benefits administration</em>.
+            </p>
+          </div>
+          <div className="guide-card">
+            <h3 className="guide-card-title">Self check-in (My Attendance)</h3>
+            <p>
+              Every member has an Attendance page. Press{" "}
+              <em>Present</em> to check in for the day (one record per day) —
+              it flows straight into HRM&apos;s attendance view and auto-creates
+              your employee profile on first check-in. You also see your own
+              attendance rate, days present, hours, and latest review.
+            </p>
+          </div>
+          <div className="guide-card">
+            <h3 className="guide-card-title">Account blocking rules</h3>
+            <p>
+              <em>Disable</em> a member for a full lockout,{" "}
+              <em>block login</em> to reject sign-in with a clear message, or{" "}
+              <em>block dashboard data</em> to hide business numbers while
+              still allowing access. These are managed per member by Admins.
+            </p>
+          </div>
+        </div>
+      </Reveal>
+
+      {/* ── Notifications & Alerts ───────────────────────── */}
+      <Reveal
+        className="guide-section"
+        id="notifications"
+        whileInView={{ opacity: 1, y: 0 }}
+      >
+        <h2 className="guide-section-title">Notifications &amp; Alerts</h2>
+        <p className="guide-section-intro">
+          Every action taken in the workspace appears in an org-wide, fully
+          transparent activity feed. The header <strong>bell</strong> shows an
+          unread badge and a dropdown; the <strong>Notifications</strong> page
+          lists the complete history, newest first.
+        </p>
+
+        <div className="guide-cards">
+          <div className="guide-card">
+            <h3 className="guide-card-title">What gets tracked</h3>
+            <p>
+              <strong>Alerts</strong> — POS sales at checkout, credit payments,
+              invoices marked paid or voided, and payroll runs.{" "}
+              <strong>Notifications</strong> — invoices created, employee
+              check-ins, and system messages. Each row shows the type icon,
+              the actor and their role, the amount, and a reference.
+            </p>
+          </div>
+          <div className="guide-card">
+            <h3 className="guide-card-title">Your read state</h3>
+            <p>
+              Read state is tracked per member, so everyone has their own
+              unread count. <em>Mark all read</em> clears your badge; new
+              activity emitted anywhere in the app updates the feed
+              automatically.
+            </p>
+          </div>
+          <div className="guide-card">
+            <h3 className="guide-card-title">Delete permissions</h3>
+            <p>
+              Only the <strong>Super Admin</strong> can delete or clear
+              notifications by default. The Super Admin can switch on an
+              &quot;Admins can delete&quot; setting to extend that to Admins.
             </p>
           </div>
         </div>
@@ -476,7 +736,7 @@ const Guide = () => {
 
         <div className="guide-cards">
           <div className="guide-card">
-            <h4 className="guide-card-title">Profile</h4>
+            <h3 className="guide-card-title">Profile</h3>
             <p>
               Displays your full name, username, and email. These are
               set during sign-up and reflect what is stored in your
@@ -484,7 +744,7 @@ const Guide = () => {
             </p>
           </div>
           <div className="guide-card">
-            <h4 className="guide-card-title">Currency Preference</h4>
+            <h3 className="guide-card-title">Currency Preference</h3>
             <p>
               Choose the currency displayed throughout the app. The
               default is <strong>NLE</strong> (Sierra Leonean New Leones).
@@ -493,7 +753,7 @@ const Guide = () => {
             </p>
           </div>
           <div className="guide-card">
-            <h4 className="guide-card-title">Appearance</h4>
+            <h3 className="guide-card-title">Appearance</h3>
             <p>
               Toggle between <strong>Light mode</strong> and{" "}
               <strong>Dark mode</strong>. Your choice is remembered
@@ -501,7 +761,7 @@ const Guide = () => {
             </p>
           </div>
           <div className="guide-card">
-            <h4 className="guide-card-title">Sign Out</h4>
+            <h3 className="guide-card-title">Sign Out</h3>
             <p>
               Ends your session and returns you to the Login screen.
               Close your browser tab after signing out on a shared
@@ -538,7 +798,31 @@ const Guide = () => {
           },
           {
             q: "Can I have multiple users?",
-            a: "Each account is separate. Multiple staff members can each create their own account and manage the same business data if they share login credentials.",
+            a: "Yes. Beyond personal accounts, Merchant Core offers an Organisation workspace where a Super Admin can add Admins, HRM and Finance managers, and staff — each logging in with the organisation name and their own credentials, with role-based access.",
+          },
+          {
+            q: "What is the Marketplace in Merchant Core?",
+            a: "The Marketplace is an in-app shopping hub where you can browse shops and their products, add items to a cart, and check out. Merchant Core also includes a billboard that plays short video adverts, plus tools to open your own shop and upload your POS products to it.",
+          },
+          {
+            q: "Can I use a spreadsheet inside Merchant Core?",
+            a: "Yes. The Spreadsheet workspace is an Excel-style editor with workbook autosave, Save/Ctrl+S, and import/export of .xlsx and .csv files. Every workbook has its own shareable deep link.",
+          },
+          {
+            q: "Can a team run its business in Merchant Core?",
+            a: "Yes. The Organisation workspace lets a whole team work on one account with clear roles: Super Admin, Admin, HRM Manager, Finance Manager, and Staff. Module access follows each role automatically.",
+          },
+          {
+            q: "Can I manage payroll, attendance, and HR?",
+            a: "Yes, within the Organisation workspace. HRM covers employees, payroll runs, time and attendance, performance reviews, and benefits administration. Every member can also check in with a self check-in attendance page.",
+          },
+          {
+            q: "Can I create invoices and track tax?",
+            a: "Yes. The Finance & Accounting tools include a general ledger, automated invoicing with draft/sent/paid/void states, tax obligations with due dates, and a real-time balance sheet.",
+          },
+          {
+            q: "How do notifications work?",
+            a: "Every sale, credit payment, invoice, payroll run, and employee check-in is emitted to an org-wide activity feed. The header bell shows an unread badge and a dropdown, and a dedicated Notifications page lists everything with the actor, amount, and time.",
           },
           {
             q: "What happens if I forget my password?",
@@ -550,11 +834,11 @@ const Guide = () => {
           },
           {
             q: "How do stock levels update?",
-            a: "When you complete a POS checkout, the stock quantities of the products in the cart are reduced automatically. Manual edits in the Inventory page also update stock immediately.",
+            a: "When you complete a POS checkout, the stock quantities of the products in the cart are reduced automatically. Manual edits in the Inventory page also update stock immediately, and inventory changes sync through to your marketplace listings.",
           },
         ].map((item) => (
           <div key={item.q} className="guide-faq-item">
-            <h4 className="guide-faq-q">{item.q}</h4>
+            <h3 className="guide-faq-q">{item.q}</h3>
             <p className="guide-faq-a">{item.a}</p>
           </div>
         ))}

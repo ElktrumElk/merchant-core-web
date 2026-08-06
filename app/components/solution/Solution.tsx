@@ -7,6 +7,13 @@ import {
   DollarSign,
   Bell,
   Receipt,
+  Globe,
+  Columns,
+  Group,
+  Banknote,
+  ClipboardCheck,
+  Calendar,
+  UserCheck,
 } from "elk-components/icons";
 
 const solutions = [
@@ -14,7 +21,7 @@ const solutions = [
     title: "Point-of-Sale Tracking",
     Icon: ShoppingCart,
     description:
-      "Every sale is captured the moment it happens, so nothing slips through the cracks — cash, card, or credit.",
+      "Every sale is captured the moment it happens, so nothing slips through the cracks — cash, card, or mobile.",
   },
   {
     title: "Inventory Tracking",
@@ -46,18 +53,60 @@ const solutions = [
     description:
       "Every cent in and out is recorded in one trusted trail — reconcile, audit, and understand your business fully.",
   },
+  {
+    title: "Customer Management",
+    Icon: UserCheck,
+    description:
+      "Keep a searchable directory of every customer with their profile, purchase history, credit limit, and loyalty tier.",
+  },
+  {
+    title: "Marketplace & Online Storefronts",
+    Icon: Globe,
+    description:
+      "Open your own shop, upload your products, and sell to shoppers across the marketplace — complete with cart and checkout.",
+  },
+  {
+    title: "Spreadsheet Workspace",
+    Icon: Columns,
+    description:
+      "An Excel-style spreadsheet with autosave, .xlsx and .csv import/export, and shareable deep links to every workbook.",
+  },
+  {
+    title: "Organisation Workspace & Roles",
+    Icon: Group,
+    description:
+      "Run a whole team on one account — Super Admins, Admins, managers, and staff, each with role-based access to exactly what they need.",
+  },
+  {
+    title: "Finance, Invoices & Tax",
+    Icon: Banknote,
+    description:
+      "Track cash flow with a general ledger, create and send invoices, manage tax obligations, and see a live balance sheet.",
+  },
+  {
+    title: "HRM, Payroll & Attendance",
+    Icon: ClipboardCheck,
+    description:
+      "Manage the full employee lifecycle — hire, run payroll, log time and attendance, review performance, and administer benefits.",
+  },
+  {
+    title: "Notifications & Activity Feed",
+    Icon: Calendar,
+    description:
+      "Every sale, payment, and action appears in a transparent activity feed — with an unread badge so nothing goes unnoticed.",
+  },
 ];
 
 const Solution = () => {
   return (
     <>
       <section className="solution-section" id="solution">
-        <h1 className="solution-title">Issues & Solutions</h1>
+        <h2 className="solution-title">Issues & Solutions</h2>
 
         <div className="starfield issue-card">
           <Reveal whileInView={{ opacity: 1, y: 0 }}>
             <div className="is-cd-div">
-              <h2>Issues arise every day</h2>
+              <h3>Issues arise every day</h3>
               <p>
                 Issues arise every day. Outages are inevitable, but with the
                 right approach, chaos isn&apos;t.
@@ -82,7 +131,7 @@ const Solution = () => {
                   <span className="sol-exp-card-icon">
                     <Icon size={24} color="#1a1a1a" />
                   </span>
-                  <h3>{title}</h3>
+                  <h4>{title}</h4>
                 </div>
                 <p>{description}</p>
               </Reveal>

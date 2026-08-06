@@ -44,10 +44,12 @@ const Header = () => {
   return (
     <header className={`header glass-effect ${menuOpen ? "menu-open" : ""}`}>
       <div>
-        <h1>Merchant Core</h1>
+        <Link href="/#home" className="brand">
+          Merchant Core
+        </Link>
       </div>
 
-      <nav className={menuOpen ? "nav open" : "nav"}>
+      <nav className={menuOpen ? "nav open" : "nav"} aria-label="Primary">
         {navLinks.map(({ label, href }) => (
           <Link key={href} href={href} onClick={() => setMenuOpen(false)}>
             {label}

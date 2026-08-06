@@ -15,26 +15,74 @@ const geistMono = Geist_Mono({
 
 const baseUrl = new URL("https://merchant-core-bay.vercel.app");
 
+const siteDescription =
+  "Merchant Core is an all-in-one business management platform for shops and growing teams — point of sale (POS), inventory, credit ledger, customer directory, marketplace, spreadsheet workspace, and organisation tools including finance, HRM, payroll, attendance, and notifications.";
+
+const persons = [
+  {
+    "@type": "Person",
+    name: "Elkanah Cole",
+    url: "https://github.com/ElktrumElk",
+    sameAs: ["https://github.com/ElktrumElk", "https://x.com/ElktrumElk"],
+  },
+  {
+    "@type": "Person",
+    name: "Favour Macurlay",
+    url: "https://github.com/favmaclegend-ops",
+    image: "https://avatars.githubusercontent.com/u/190496474?v=4",
+    sameAs: ["https://github.com/favmaclegend-ops"],
+  },
+];
+
+const featureList = [
+  "Point of Sale (POS)",
+  "Inventory Management",
+  "Credit Ledger",
+  "Customer Directory",
+  "Marketplace",
+  "Billboard Ads",
+  "Spreadsheet Workspace",
+  "Organisation Workspace",
+  "Finance & Accounting",
+  "HRM & Payroll",
+  "Attendance Tracking",
+  "Notifications & Alerts",
+  "Calculator",
+  "Security",
+];
+
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "Merchant Core",
-  url: baseUrl.toString(),
-  description:
-    "Track sales, expenses, inventory, customers, and business records — all in one secure platform.",
-  author: [
+  "@graph": [
     {
-      "@type": "Person",
-      name: "Elkanah Cole",
-      url: "https://github.com/ElktrumElk",
-      sameAs: ["https://github.com/ElktrumElk"],
+      "@type": "WebSite",
+      "@id": "https://merchant-core-bay.vercel.app/#website",
+      name: "Merchant Core",
+      url: baseUrl.toString(),
+      description: siteDescription,
+      inLanguage: "en",
     },
     {
-      "@type": "Person",
-      name: "Favour Macurlay",
-      url: "https://github.com/favmaclegend-ops",
-      image: "https://avatars.githubusercontent.com/u/190496474?v=4",
-      sameAs: ["https://github.com/favmaclegend-ops"],
+      "@type": "SoftwareApplication",
+      name: "Merchant Core",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web",
+      description: siteDescription,
+      url: baseUrl.toString(),
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+        description: "Free to start — no subscription required.",
+      },
+      featureList,
+      author: persons,
+    },
+    {
+      "@type": "Organization",
+      name: "Merchant Core",
+      url: baseUrl.toString(),
+      founder: persons,
     },
   ],
 };
@@ -45,8 +93,7 @@ export const metadata: Metadata = {
     default: "Merchant Core — Business Management Made Easy",
     template: "%s | Merchant Core",
   },
-  description:
-    "Get track of your business by keeping record of what you sell, what you buy, and how many debtors are overdue with easy revenue calcution and much more.",
+  description: siteDescription,
   applicationName: "Merchant Core",
   authors: [
     { name: "Elkanah Cole", url: "https://github.com/ElktrumElk" },
@@ -55,19 +102,45 @@ export const metadata: Metadata = {
   generator: "Next.js",
   keywords: [
     "Merchant Core",
+    "business management software",
     "point of sale",
-    "POS",
+    "POS system",
+    "POS software",
     "inventory management",
+    "inventory software",
     "credit ledger",
-    "business management",
+    "debt tracking",
+    "customer directory",
+    "customer relationship management",
+    "CRM",
+    "marketplace",
+    "billboard ads",
+    "spreadsheet software",
+    "excel import export",
+    "organisation workspace",
+    "multi-user business software",
+    "team management",
+    "finance and accounting software",
+    "invoicing software",
+    "balance sheet",
+    "tax compliance",
+    "HRM",
+    "human resources software",
+    "payroll software",
+    "attendance tracking",
+    "notifications and alerts",
     "sales tracking",
     "expense tracking",
+    "business dashboard",
+    "retail management",
+    "shop management app",
     "small business software",
     "free inventory app",
-    "currency"
+    "currency converter",
+    "sales tracking software",
   ],
   creator: "Elkanah Cole & Favour Macurlay",
-  publisher: "Merchant Core",
+  publisher: "Vector Runner",
   robots: {
     index: true,
     follow: true,
@@ -87,8 +160,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: baseUrl,
     title: "Merchant Core — Business Management Made Easy",
-    description:
-      "Track sales, expenses, inventory, customers, and business records — all in one secure platform.",
+    description: siteDescription,
     siteName: "Merchant Core",
     images: [
       {
@@ -103,8 +175,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Merchant Core — Business Management Made Easy",
-    description:
-      "Track sales, expenses, inventory, customers, and business records — all in one secure platform.",
+    description: siteDescription,
     images: ["/merchant-core-dark.png"],
   },
 };

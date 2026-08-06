@@ -45,8 +45,9 @@ const Footer = () => {
             <h2>Merchant Core</h2>
             <p>Business Management Made Easy</p>
             <p className="footer-desc">
-              Track sales, expenses, inventory, customers, and business records
-              — all in one secure platform.
+              Point of sale, inventory, credit ledger, customer directory,
+              marketplace, spreadsheet workspace, and team tools — finance,
+              HRM &amp; payroll — all in one secure platform.
             </p>
             <a href={REPO_URL} target="_blank" rel="noopener noreferrer" className="repo-link">
               <GitHubIcon />
@@ -54,7 +55,7 @@ const Footer = () => {
             </a>
           </div>
 
-          <div className="footer-nav">
+          <nav className="footer-nav" aria-label="Footer">
             <h3>Quick Links</h3>
             <ul>
               {navLinks.map(({ label, href }) => (
@@ -65,9 +66,9 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
-          <div className="footer-team">
+          <nav className="footer-team" aria-label="Built by">
             <h3>Built by</h3>
             <ul>
               {team.map((member) => (
@@ -86,7 +87,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
         </Reveal>
 
         <div className="footer-bottom">
