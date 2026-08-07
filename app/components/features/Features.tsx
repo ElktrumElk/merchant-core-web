@@ -52,7 +52,7 @@ const growthFeatures = [
     name: "Marketplace & Billboard Ads",
     des: "Browse shops, discover products, add to cart and check out across the marketplace — while an in-app billboard plays short video adverts for your business.",
     pos: "right",
-    src: "/merchant-core-dark.png",
+    src: "/market.png",
   },
   {
     name: "Spreadsheet Workspace",
@@ -70,19 +70,19 @@ const growthFeatures = [
     name: "Finance & Accounting",
     des: "Track cash flow with a general ledger, create and send invoices, manage tax obligations, and view a real-time balance sheet.",
     pos: "left",
-    src: "/dashboard.png",
+    src: "/finance.png",
   },
   {
     name: "HRM & Payroll",
     des: "Manage the entire employee lifecycle — hiring, payroll runs, time and attendance, performance reviews, and benefits administration.",
     pos: "right",
-    src: "/merchant-core-dark.png",
+    src: "/hrm.png",
   },
   {
     name: "Notifications & Alerts",
     des: "A transparent activity feed of every sale, payment, and action — with an unread badge, per-member read state, and role-gated controls.",
     pos: "left",
-    src: "/dashboard.png",
+    src: "/notification.png",
   },
 ];
 
